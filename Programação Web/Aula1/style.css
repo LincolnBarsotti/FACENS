@@ -1,9 +1,8 @@
-body{
-    background-color: yellowgreen;
-    color: black;
+body {
+    background-image: url('images/pikachu.jpg');
+    color: white; 
 }
 
-#lo{
-    color: lawngreen;
-    font-size: 100%;
+#javascript, #html{
+    color: gold;
 }
