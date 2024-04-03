@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+
+.container{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 700px;
+    height: 500px;
+    min-width: 500px;
+    margin: 20px auto;
+}
+
+#titulo{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2{
+    color: blue;
+}
+
+.subtitulo{
+    color: red;
+}
+
+#subtitulo1{
+    color: green;
+}
+
+.div3{
+    padding: 10px;
+}
