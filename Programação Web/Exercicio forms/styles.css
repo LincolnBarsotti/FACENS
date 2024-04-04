@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-used: 'Open Sans', sans-serif;
+    --neutral-green: #00ff22;
+    --neutral-black-111: #111111;
+    --neutral-white-FFF: #ffffff;
+}
+
+body {
+    font-family: var(--font-used);
+    color: var(--font-neutral-black);
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    box-sizing: border-box;
+} 
+
+h2{
+    width: 100%;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mb-3 {
+    flex: 1 1 calc(30% - 10px);
+    margin-right: 20px; 
+    margin-bottom: 20px;
+}
+
+
+#survey-form {
+    margin: 0 25%;
+    background-color: rgba(151, 219, 216, 0.589);
+}
+
+.form-check-input:checked {
+    background-color: var(--neutral-green);
+}
+
+#name-label, #email-label, #number-label, #chess-rating, #about-us, #suggestions {
+    font-size: 1.25rem;
+}
+
+#create-tournament, #sign-up {
+    border: 1px solid var(--neutral-green);
+    color: var(--neutral-green);
+}
+
+#create-tournament:hover, #submit:hover {
+    background-color: var(--neutral-black-111);
+    color: var(--neutral-white-FFF);
+}
+
+#submit:active {
+    background-color: var(--neutral-green);
+    color: var(--neutral-black-111);
+}
