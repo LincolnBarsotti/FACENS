@@ -11,11 +11,11 @@ import { FormsModule } from '@angular/forms';
 export class MenuSuperiorComponent {
   public num1: any;
   public num2: any;
-  public num3: string = "";
+  public operacao: string = "";
   public result: any;
 
   btnEnviar() {
-    switch (this.num3) {
+    switch (this.operacao) {
       case "+":
         this.result = parseFloat(this.num1) + parseFloat(this.num2);
         break;
