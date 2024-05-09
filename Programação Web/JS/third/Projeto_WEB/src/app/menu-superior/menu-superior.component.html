@@ -1,1 +1,35 @@
-<p>menu-superior works!</p>
+<div class="row">
+    <h1 class="bg-primary col-12 text-center">Calculadora</h1>
+</div>
+
+<div class="row g-3">
+    <div class="col">
+        <input type="number" class="form-control" id="primeiroNum" placeholder="Primeiro número"
+            aria-label="Primeiro número" [(ngModel)]="num1">
+    </div>
+    <div class="col">
+        <input type="number" class="form-control" placeholder="Segundo número" aria-label="Segundo número"
+            [(ngModel)]="num2">
+    </div>
+    <div class="col-sm-3">
+        <select class="form-select" id="operacao" [(ngModel)]="num3">
+            <option value="" >Escolha a operação matematica</option>
+            <option value="+">+ (MAIS)</option>
+            <option value="-">- (MENOS)</option>
+            <option value="*">* (MULTIPLICAÇÃO)</option>
+            <option value="/">/ (DIVISÃO)</option>
+            <option value="%">% (RESTO DA DIVISÃO)</option>
+        </select>
+    </div>
+</div>
+<div class="row g-1 ">
+    <div class="col-5">
+        <p></p>
+    </div>
+    <div class="col-3">
+        <button type="submit" class="btn btn-primary" (click)="btnEnviar()">Enviar</button>
+    </div>
+    <div class="col-12">
+        <input type="number" class="form-control text-center" id="resultado" [(ngModel)]="result" disabled>
+    </div>
+</div>
