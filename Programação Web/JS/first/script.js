@@ -42,7 +42,7 @@ function tabuada() {
     for (let i = 0; i <= 10; i++) {
         var elemento = document.createElement("li");
         elemento.className = "elemento";
-        elemento.textContent = i + " + " + 5 + " = " + i * cinco;
+        elemento.textContent = i + " * " + 5 + " = " + i * cinco;
         list.appendChild(elemento);
     }
 }
@@ -53,7 +53,7 @@ function tabuadaDigitada() {
     for (let i = 0; i <= 10; i++) {
         var elemento = document.createElement("li");
         elemento.className = "resultado";
-        elemento.textContent = i + " + " + 5 + " = " + i * parseInt(n3);
+        elemento.textContent = i + " * " + 5 + " = " + i * parseInt(n3);
         list.appendChild(elemento);
     }
 }
@@ -103,8 +103,8 @@ function btnCalcular() {
     var custoFinal = document.getElementById("valorfinal");
 
     var resultado = parseInt(custoFabrica) +
-        (parseInt(custoFabrica) * parseInt(percDistribuidor)) +
-        (parseInt(custoFabrica) * parseInt(percImpostos));
+        (parseInt(custoFabrica) * (parseInt(percDistribuidor)/ 100)) +
+        (parseInt(custoFabrica) * (parseInt(percImpostos) / 100));
 
     custoFinal.value = resultado;
 }
