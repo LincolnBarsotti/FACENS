@@ -1,0 +1,39 @@
+<div class=" cor container">
+    <br>
+    <h1 class="text-center">APOLICE</h1>
+    <div class="row">
+        <div class="col-6">
+            <input type="text" class="form-control" placeholder="Nome do segurado" aria-label="Nome do
+        segurado" [(ngModel)]="nomeDoSegurado">
+        </div>
+        <div class="col-6">
+            <input type="text" class="form-control" placeholder="Sexo" aria-label="Sexo" [(ngModel)]="sexo">
+        </div>
+        <br>
+        <p></p>
+        <div class="col-6">
+            <input type="number" class="form-control" placeholder="idade" aria-label="idade" [(ngModel)]="idade">
+        </div>
+        <div class="col-6">
+            <input type="number" class="form-control" placeholder="Valor Do Automovel" aria-label="Valor Do Automovel"
+                [(ngModel)]="valorDoAutomovel">
+        </div>
+        <br>
+        <p></p>
+        
+        <div class="row ms-0 col-12 ">
+            <input type="button" class="btn btn-primary" value="Calcular" (click)="calcular()">
+        </div>
+
+        <br>
+        <p></p>
+
+        <div class="col-12 ">
+            <input type="number" class="form-control text-center" value="{{resultado}}" [disabled]="!conta">
+        </div>
+
+        <br>
+        <p></p>
+    </div>
+
+</div>
