@@ -1,26 +1,38 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tarefas',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './tarefas.component.html',
   styleUrl: './tarefas.component.css'
 })
-export class TarefasComponent {
+export class TarefasComponent implements OnInit{
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+  
   tarefas = {
     descricaoDaTarefa: "",
     selectedStatus: ""
   }
 
-  listaDeTarefas: objetoTarefa[] = [];
-
+  listaDeTarefas: objetoTarefa[] = [
+    { descricao: 'Fazer compras', status: false },
+    { descricao: 'Estudar para a prova', status: true },
+    { descricao: 'Reunião com o cliente', status: false },
+    { descricao: 'Enviar relatório', status: true },
+    { descricao: 'Agendar consulta médica', status: false }
+  ];
+  
   criar() {
     if (this.tarefas.descricaoDaTarefa != "" && this.tarefas.selectedStatus != "") {
       let tarefaMomentanea: objetoTarefa = {
         descricao: this.tarefas.descricaoDaTarefa,
-        status: this.tarefas.selectedStatus
+        status: Boolean(this.tarefas.selectedStatus)
       };
 
       this.listaDeTarefas.push(tarefaMomentanea);
@@ -31,6 +43,10 @@ export class TarefasComponent {
     }else{
       alert("Atribua um status ou uma descrição");
     }
+  }
+
+  deletarTarefa(tarefaListada:objetoTarefa){
+    this.listaDeTarefas = this.listaDeTarefas.filter( t => t !== tarefaListada);
   }
 
 }
@@ -48,5 +64,5 @@ Dica: Para aplicar um estilo de texto tachado usando a diretiva [ngStyle], você
 */
 interface objetoTarefa {
   descricao: string;
-  status: string;
+  status: boolean;
 }

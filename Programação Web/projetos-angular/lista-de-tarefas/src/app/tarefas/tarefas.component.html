@@ -13,17 +13,12 @@
                 <legend class="col-form ">Status da tarefa</legend>
                 <div class="col-sm-10">
                     <form #radioForm="ngForm">  <div class="form-check">
-                        <input class="form-check-input" type="radio" id="gridRadios1" value="Concluido" name="selectedStatus" [(ngModel)]="tarefas.selectedStatus">  <label class="form-check-label" for="gridRadios1">
+                        <input class="form-check-input" type="radio" id="gridRadios1" value="true" name="selectedStatus" [(ngModel)]="tarefas.selectedStatus">  <label class="form-check-label" for="gridRadios1">
                           Concluído
                         </label>
                       </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" id="gridRadios2" value="Em andamento" name="selectedStatus" [(ngModel)]="tarefas.selectedStatus">  <label class="form-check-label" for="gridRadios2">
-                          Em andamento
-                        </label>
-                      </div>
                       <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" id="gridRadios3" value="não concluido" name="selectedStatus" [(ngModel)]="tarefas.selectedStatus">  <label class="form-check-label" for="gridRadios3">
+                        <input class="form-check-input" type="radio" id="gridRadios3" value="false" name="selectedStatus" [(ngModel)]="tarefas.selectedStatus">  <label class="form-check-label" for="gridRadios3">
                           Não concluido
                         </label>
                       </div>
@@ -33,4 +28,5 @@
         </div>
         <button type="button" class="btn btn-primary" (click)="criar()">Criar tarefa</button>
     </div>
+ 
 </div>
