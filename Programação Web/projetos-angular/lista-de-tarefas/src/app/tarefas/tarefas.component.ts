@@ -10,20 +10,27 @@ import { FormsModule } from '@angular/forms';
 })
 export class TarefasComponent {
   tarefas = {
-    descricaoDaTarefa:"",
-    selectedStatus:  ""
+    descricaoDaTarefa: "",
+    selectedStatus: ""
   }
 
-  listaDeTarefas:objetoTarefa[] =[] ;
+  listaDeTarefas: objetoTarefa[] = [];
 
- 
-  
   criar() {
     if (this.tarefas.descricaoDaTarefa != "" && this.tarefas.selectedStatus != "") {
-      this.listaDeTarefas.push(new objetoTarefa());
+      let tarefaMomentanea: objetoTarefa = {
+        descricao: this.tarefas.descricaoDaTarefa,
+        status: this.tarefas.selectedStatus
+      };
+
+      this.listaDeTarefas.push(tarefaMomentanea);
       console.log(this.listaDeTarefas);
-      
-    }    
+
+      this.tarefas.descricaoDaTarefa = "";
+      this.tarefas.selectedStatus = "";
+    }else{
+      alert("Atribua um status ou uma descrição");
+    }
   }
 
 }
@@ -39,6 +46,7 @@ Use a diretiva [ngStyle] para aplicar um estilo de texto tachado (riscado) nas t
 Adicione um botão "Concluir" em cada tarefa da lista que alterna o valor da propriedade "concluida" da tarefa entre verdadeiro e falso.
 Dica: Para aplicar um estilo de texto tachado usando a diretiva [ngStyle], você pode definir uma expressão que retorna um objeto com a propriedade "text-decoration" definida como "line-through" se a tarefa estiver concluída
 */
-type objetoTarefa = {
-  name:string
- }
+interface objetoTarefa {
+  descricao: string;
+  status: string;
+}
