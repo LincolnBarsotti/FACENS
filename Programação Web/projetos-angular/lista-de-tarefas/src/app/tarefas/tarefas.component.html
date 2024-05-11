@@ -28,5 +28,16 @@
         </div>
         <button type="button" class="btn btn-primary" (click)="criar()">Criar tarefa</button>
     </div>
- 
+    <ul class="list-group">
+        <br>
+        <h3>Lista de tarefas criadas</h3>
+        <p></p>
+        <li *ngFor="let tarefa of listaDeTarefas" class="list-group-item">
+         Descrição:  {{ tarefa.descricao }} <br> Status {{ tarefa.status }}
+          <button class="btn btn-sm btn-danger float-end" (click)="deletarTarefa(tarefa)">Excluir</button>
+        </li>
+      </ul>
+      <br>
+      <p></p>
+  
 </div>
