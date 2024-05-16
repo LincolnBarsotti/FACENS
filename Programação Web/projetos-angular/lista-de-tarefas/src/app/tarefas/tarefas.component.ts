@@ -21,11 +21,11 @@ export class TarefasComponent implements OnInit{
   }
 
   listaDeTarefas: objetoTarefa[] = [
-    { descricao: 'Fazer compras', status: false },
-    { descricao: 'Estudar para a prova', status: true },
-    { descricao: 'Reunião com o cliente', status: false },
-    { descricao: 'Enviar relatório', status: true },
-    { descricao: 'Agendar consulta médica', status: false }
+    { descricao: 'Prova Programação web', status: false },
+    { descricao: 'Prova Modelagem de negocios', status: true },
+    { descricao: 'UPX', status: false },
+    { descricao: 'Tinder', status: true },
+    { descricao: 'Tarefa', status: false }
   ];
 
   validarStatus(strg: string){
