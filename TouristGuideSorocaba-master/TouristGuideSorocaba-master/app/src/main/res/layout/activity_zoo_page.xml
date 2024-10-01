@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ZooPage">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Zoológico"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/buttonVoltar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:onClick="onReload"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/zoo"
+                android:foregroundGravity="fill"
+                android:minHeight="300dp"
+                android:scaleType="fitStart"
+                android:textAlignment="viewStart"
+                tools:srcCompat="@mipmap/zoo" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:editable="false"
+                android:onClick="onReload"
+                android:text="Descubra a fascinante história de Sorocaba no Museu local. Desde artefatos antigos até exposições modernas, cada visita é uma jornada através dos séculos. Explore a riqueza cultural da cidade em exposições cuidadosamente curadas. Uma experiência enriquecedora para todos os visitantes, sejam entusiastas da história ou curiosos. Visite-nos hoje e mergulhe no passado de Sorocaba!"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/buttonSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxWidth="200dp"
+                android:minWidth="50dp"
+                android:text="Visite o Site"
+                android:textAlignment="viewStart"
+                app:icon="@android:drawable/ic_menu_send" />
+
+            <Button
+                android:id="@+id/buttonMapa"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxWidth="200dp"
+                android:minWidth="50dp"
+                android:text="Localizar"
+                android:textAlignment="viewStart"
+                app:icon="@android:drawable/ic_menu_mapmode" />
+
+            <Button
+                android:id="@+id/buttonCall"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:minWidth="50dp"
+                android:text="Ligar"
+                android:textAlignment="viewStart"
+                app:icon="@android:drawable/ic_menu_call" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

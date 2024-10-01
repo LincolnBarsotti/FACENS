@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TouristGuideSorocaba" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#3F51B5</item> <!-- Cor primária do aplicativo -->
+        <item name="colorPrimaryDark">#303F9F</item> <!-- Cor primária escura do aplicativo -->
+        <item name="colorAccent">#FF4081</item>
+    </style>
+</resources>
